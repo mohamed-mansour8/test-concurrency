@@ -19,7 +19,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v3
         with:
           role-to-assume: arn:aws:iam::837491041518:role/Github-VultaraRepo
-          role-session-name: test/mansour
+          role-session-name: test-${{ github.actor }}-${{ github.run_id }}
           aws-region: us-east-1  # Change to your AWS region
 
       - name: Create a file
